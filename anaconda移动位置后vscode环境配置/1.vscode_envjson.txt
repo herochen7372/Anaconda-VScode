@@ -1,0 +1,59 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "json.schemas": [
+    
+    
+
+    ],
+    "debug.javascript.terminalOptions": {
+    
+    },
+
+    "python.pythonPath": "/home/chen/anaconda3/bin/python",
+    "code-runner.executorMap": {
+        "python": "/home/chen/anaconda3/envs/cs/bin/python"
+    },
+
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.runInTerminal": true,
+    "python.autoComplete.extraPaths": [
+        "/home/chen/anaconda3/lib/python3.9/site-packages"
+    ],
+    "python.analysis.extraPaths": [],
+    "terminal.integrated.inheritEnv": false,
+
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": -1,
+    "python.linting.flake8Enabled": false,
+    "python.formatting.provider": "autopep8",
+    "python.unitTest.unittestEnabled": true,
+    "python.unitTest.pyTestEnabled": true,
+    "python.unitTest.nosetestsEnabled": false,
+    
+    "[cpp]": {
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    }
+    },
+    "[c]": {
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    }
+    },
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "editor.fontSize": 28,
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "python.defaultInterpreterPath": "/home/chen/anaconda3/envs/cuda-chun/bin/python",
+    "workbench.editorAssociations": {
+        "*.json": "default"
+    },
+
+
+
+    
+}

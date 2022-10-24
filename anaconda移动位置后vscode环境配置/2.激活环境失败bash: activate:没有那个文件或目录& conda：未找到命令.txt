@@ -1,0 +1,30 @@
+
+激活环境失败bash: activate:没有那个文件或目录& conda：未找到命令
+原因分析
+
+这是因为conda的环境变量出错，把当前的conda环境变量重新加载进去即可。
+仅拿Linux系统或Linux服务器举例：
+
+解决方法
+在环境变量里进行添加设置
+1、打开文件
+
+sudo gedit ~/.bashrc
+
+
+2、添加下面语句至最后
+
+export PATH="~/anaconda3/bin:$PATH"
+
+
+3、执行文件
+
+source ~/.bashrc
+
+退出再次激活环境成功！
+
+
+vi操作
+i插入
+Esc推出
+：+ wq 保存 

@@ -1,0 +1,52 @@
+解决bash: /home/xxx/anaconda3/bin/conda: No such file or directory的问题
+desires19
+desires19
+
+﻿# 在转移账户文件夹后，anaconda不可使用的bug
+bash: /home/xxx/anaconda3/bin/conda: No such file or directory
+
+    检查path变量
+
+echo $PATH
+
+看一下环境变量中是否包含移动之后的文件目录，主要到*/anaconda3/bin这一层。如果没有，请在~/.bashrc中加上一句：
+
+export PATH="**/anaconda3/bin:$PATH"  #前面填你的新目录
+
+    更改 ~/.bashrc中的conda相关的地址
+
+vim ~/.bashrc
+# added by Anaconda3 5.3.1 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/data3/xxx/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/data3/xxx/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/data3/xxx/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/data3/xxx/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+
+    修改conda内的变量
+
+vim ~/anaconda3/bin/pip
+
+vim ~/anaconda3/bin/conda
+
+vim ~/anaconda3/bin/pip3
+
+将第一行的对应路径进行修改
+
+#!/home/data3/xxx/anaconda3/bin/python
+
+    对每个环境的pip进行修改，否则无法进行pip安装
+
+cd ~/anaconda3/envs/
+vim xxx/bin/pip     # xxx为环境名
+vim xxx/bin/pip3
